@@ -1,25 +1,83 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="6185.10" systemVersion="14A360a" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="NO" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="9052" systemVersion="14F27" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6181.2"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9040"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TVSafeArea" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fullScreenBG" translatesAutoresizingMaskIntoConstraints="NO" id="bdx-vF-QWN">
+                                <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jHD-kX-GuF" customClass="TVSafeView" customModule="TVSafeArea" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="killBillPoster" translatesAutoresizingMaskIntoConstraints="NO" id="YwH-ab-iDZ">
+                                        <rect key="frame" x="1270" y="60" width="560" height="768"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kill Bill Vol.1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9mE-3q-L7L">
+                                        <rect key="frame" x="90" y="60" width="478" height="102"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="85"/>
+                                        <color key="textColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mtu-YZ-IXG">
+                                        <rect key="frame" x="90" y="188" width="813" height="341"/>
+                                        <string key="text">A former assassin, known simply as The Bride (Uma Thurman), wakes from a coma four years after her jealous ex-lover Bill (David Carradine) attempts to murder her on her wedding day. Fueled by an insatiable desire for revenge, she vows to get even with every person who contributed to the loss of her unborn child, her entire wedding party, and four years of her life. After devising a hit list, The Bride sets off on her quest, enduring unspeakable injury and unscrupulous enemies.</string>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="29"/>
+                                        <color key="textColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eeo-aG-aJJ">
+                                        <rect key="frame" x="90" y="579" width="276" height="86"/>
+                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                        <state key="normal" title="Watch Now"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mSx-tv-dxd">
+                                        <rect key="frame" x="403" y="579" width="382" height="86"/>
+                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                        <state key="normal" title="Add to Watch List"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="9mE-3q-L7L" firstAttribute="leading" secondItem="jHD-kX-GuF" secondAttribute="leadingMargin" id="4eA-5H-OW2"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="YwH-ab-iDZ" secondAttribute="trailing" id="Egi-CI-xNw"/>
+                                    <constraint firstItem="9mE-3q-L7L" firstAttribute="top" secondItem="jHD-kX-GuF" secondAttribute="topMargin" id="jPS-OQ-BHR"/>
+                                    <constraint firstItem="YwH-ab-iDZ" firstAttribute="top" secondItem="jHD-kX-GuF" secondAttribute="topMargin" id="jbx-84-jC3"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bdx-vF-QWN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="9eo-3v-xop"/>
+                            <constraint firstAttribute="trailing" secondItem="bdx-vF-QWN" secondAttribute="trailing" id="Ayh-bL-Wax"/>
+                            <constraint firstItem="bdx-vF-QWN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Pki-gi-bMR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bdx-vF-QWN" secondAttribute="bottom" id="RYt-Ww-PRf"/>
+                            <constraint firstItem="jHD-kX-GuF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="SqK-hM-gBV"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jHD-kX-GuF" secondAttribute="bottom" id="gZ1-aT-r8A"/>
+                            <constraint firstItem="jHD-kX-GuF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mfD-hs-eyd"/>
+                            <constraint firstAttribute="trailing" secondItem="jHD-kX-GuF" secondAttribute="trailing" id="naa-pY-5Sa"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="558" y="501"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="fullScreenBG" width="1920" height="1080"/>
+        <image name="killBillPoster" width="560" height="768"/>
+    </resources>
 </document>
